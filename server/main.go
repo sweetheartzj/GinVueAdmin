@@ -12,4 +12,7 @@ func main() {
 	global.GVA_LOG = core.Zap()
 
 	zap.ReplaceGlobals(global.GVA_LOG)
+
+	core.RunServer()
+
 }
