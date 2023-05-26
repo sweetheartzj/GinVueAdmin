@@ -18,5 +18,8 @@ func (base *BaseApi) Register(ctx *gin.Context) {
 	err := ctx.ShouldBindJSON(&r)
 	if err != nil {
 		commonRes.FailWithMessage("Parameters Error", ctx)
+		return
 	}
+
+	commonRes.OkWithMessage("Register Success", ctx)
 }
